@@ -1,6 +1,6 @@
 ## Before running python code
 
--   Install dependencies: run command `python install -r requirements.txt`
+-   Install dependencies: run command `pip install -r requirements.txt`
 
 ## Run python code
 

@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_restful import Api
 from flask_cors import CORS
+from api.fairino_control import FairinoControl
 
 app = Flask(__name__)
 CORS(app, resources=r"/*")  # all origins
@@ -11,8 +12,7 @@ CORS(app, resources=r"/*")  # all origins
 api = Api(app)
 
 # ROUTE CONFIG
-# api.add_resource(People, "/name/")
-# api.add_resource(PeopleAction, "/name/<string:name>")
+api.add_resource(FairinoControl, "/fairino-control:<string:command>/")
 # ROUTE CONFIG
 
 if __name__ == "__main__":
